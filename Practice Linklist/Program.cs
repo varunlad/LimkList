@@ -11,10 +11,13 @@ namespace Practice_Linklist
         static void Main(string[] args)
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            //UC3 append
-            customLinkedList.Append(56);
-            customLinkedList.Append(30);
-            customLinkedList.Append(70);
+            //UC4 Deleting first node of LinkList
+            customLinkedList.InsertLast(56);
+            customLinkedList.InsertLast(30);
+            customLinkedList.InsertLast(70);
+            customLinkedList.Display();
+            Console.WriteLine("\nDeleted node:"+ customLinkedList.DeleteFirstNode());
+            customLinkedList.Display();
             Console.ReadLine();
         }
     }
