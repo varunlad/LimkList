@@ -11,11 +11,10 @@ namespace Practice_Linklist
         static void Main(string[] args)
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            //UC2 insert front
-            customLinkedList.InsertFront(56);
-            customLinkedList.InsertFront(30);
-            customLinkedList.InsertFront(70);
-
+            //UC3 append
+            customLinkedList.Append(56);
+            customLinkedList.Append(30);
+            customLinkedList.Append(70);
             Console.ReadLine();
         }
     }
