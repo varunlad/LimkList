@@ -11,12 +11,12 @@ namespace Practice_Linklist
         static void Main(string[] args)
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            //UC4 Deleting first node of LinkList
+            //UC4 Deleting Last node of LinkList
             customLinkedList.InsertLast(56);
             customLinkedList.InsertLast(30);
             customLinkedList.InsertLast(70);
             customLinkedList.Display();
-            Console.WriteLine("\nDeleted node:"+ customLinkedList.DeleteFirstNode());
+            Console.WriteLine("\nDeleted node:"+ customLinkedList.DeleteLastNode());
             customLinkedList.Display();
             Console.ReadLine();
         }

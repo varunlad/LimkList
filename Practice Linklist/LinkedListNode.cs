@@ -9,6 +9,10 @@ namespace Practice_Linklist
     class CustomLinkedList
     {
         public Node head;
+        /// <summary>
+        /// Inserts the last.
+        /// </summary>
+        /// <param name="new_data">The new data.</param>
         public void InsertLast(int new_data)
         {
 
@@ -35,15 +39,30 @@ namespace Practice_Linklist
             return temp;
         }
 
-        public int DeleteFirstNode()
+        /// <summary>
+        /// Deletes the last node.
+        /// </summary>
+        /// <returns></returns>
+        public int DeleteLastNode()
         {
+            Node newNode = this.head;
             if (this.head == null)
             {
                 return 0;
             }
-            int deleteNode = this.head.data;
-            this.head = this.head.next;
-            return deleteNode;
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return 0;
+            }
+
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            int lastDeletedNode = newNode.next.data;
+            newNode.next = null;
+            return lastDeletedNode;
         }
         public void Display() //Display the LinkList
         {
@@ -61,7 +80,7 @@ namespace Practice_Linklist
                     Console.Write(" " + temp.data + "");
                     temp = temp.next;
                 }
-               
+                
             }
 
         }
