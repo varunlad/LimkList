@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Practice_Linklist
-{
+{/// <summary>
+/// Basic structure of LinkList
+/// </summary>
     class Node
     {
         public int data;

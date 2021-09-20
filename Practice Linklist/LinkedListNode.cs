@@ -9,34 +9,15 @@ namespace Practice_Linklist
     class CustomLinkedList
     {
         public Node head;
-        /// <summary>
-        /// Inserts the last.
-        /// </summary>
-        /// <param name="new_data">The new data.</param>
-        public void InsertLast(int new_data)
+        public void InsertFront(int new_data)
         {
-
+            ///We will create a new node. The next of the new node will point to the head of the Linked list.
             Node new_node = new Node(new_data);
-            if (this.head == null)
-            {
-                this.head = new_node;
-            }
-            else
-            {
-                Node lastNode = GetLastNode();
-                lastNode.next = new_node;
-            }
-            Console.WriteLine("inserted Last into list " + new_node.data);
-
-        }
-        public Node GetLastNode()
-        {
-            Node temp = this.head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            return temp;
+            /// When we want to add any node at the front, we want the head to point to it.
+            new_node.next = this.head;
+            ///The previous Head node is now the second node of Linked List because the new node is added at the front.
+            this.head = new_node;
+            Console.WriteLine("inserted Front into list " + new_node.data);
         }
     }
 }
