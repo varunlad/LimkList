@@ -39,31 +39,7 @@ namespace Practice_Linklist
             return temp;
         }
 
-        /// <summary>
-        /// Deletes the last node.
-        /// </summary>
-        /// <returns></returns>
-        public int DeleteLastNode()
-        {
-            Node newNode = this.head;
-            if (this.head == null)
-            {
-                return 0;
-            }
-            if (this.head.next == null)
-            {
-                this.head = null;
-                return 0;
-            }
-
-            while (newNode.next.next != null)
-            {
-                newNode = newNode.next;
-            }
-            int lastDeletedNode = newNode.next.data;
-            newNode.next = null;
-            return lastDeletedNode;
-        }
+        
         public void Display() //Display the LinkList
         {
             Console.WriteLine("Displaying Nodes ");
@@ -83,6 +59,21 @@ namespace Practice_Linklist
                 
             }
 
+        }
+        //UC 7 serach for particular node
+        public int Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\nNode is present ");
+                    return value;
+                }
+                temp = temp.next;
+            }
+            return value;
         }
     }
 }

@@ -16,8 +16,7 @@ namespace Practice_Linklist
             customLinkedList.InsertLast(30);
             customLinkedList.InsertLast(70);
             customLinkedList.Display();
-            Console.WriteLine("\nDeleted node:"+ customLinkedList.DeleteLastNode());
-            customLinkedList.Display();
+            Console.WriteLine(customLinkedList.Search(70));
             Console.ReadLine();
         }
     }
