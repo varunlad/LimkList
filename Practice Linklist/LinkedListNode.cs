@@ -60,20 +60,17 @@ namespace Practice_Linklist
             }
 
         }
-        //UC 7 serach for particular node
-        public int Search(int value)
+      
+        public int getCount()
         {
-            Node temp = this.head;
+            Node temp = head;
+            int count = 0;
             while (temp != null)
             {
-                if (temp.data == value)
-                {
-                    Console.WriteLine("\nNode is present ");
-                    return value;
-                }
+                count++;
                 temp = temp.next;
             }
-            return value;
+            return count;
         }
     }
 }

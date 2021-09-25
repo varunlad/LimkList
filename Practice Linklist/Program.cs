@@ -14,9 +14,12 @@ namespace Practice_Linklist
             //UC4 Deleting Last node of LinkList
             customLinkedList.InsertLast(56);
             customLinkedList.InsertLast(30);
+            customLinkedList.InsertLast(40);
             customLinkedList.InsertLast(70);
             customLinkedList.Display();
-            Console.WriteLine(customLinkedList.Search(70));
+            Console.WriteLine("\nCount of nodes is " + customLinkedList.getCount());
+            customLinkedList.Display();
+
             Console.ReadLine();
         }
     }
