@@ -46,7 +46,7 @@ namespace Practice_Linklist
         public int DeleteLastNode()
         {
             Node newNode = this.head;
-            if (this.head == null)
+            if (this.head == null) //Checking for Linklist if it is empty or not
             {
                 return 0;
             }
@@ -56,12 +56,12 @@ namespace Practice_Linklist
                 return 0;
             }
 
-            while (newNode.next.next != null)
+            while (newNode.next.next != null)  //We have to Continue the loop until we find a node will next pointing to null
             {
                 newNode = newNode.next;
             }
-            int lastDeletedNode = newNode.next.data;
-            newNode.next = null;
+            int lastDeletedNode = newNode.next.data;  //Deleting the Node  
+            newNode.next = null;                    
             return lastDeletedNode;
         }
         public void Display() //Display the LinkList
