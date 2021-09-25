@@ -37,12 +37,12 @@ namespace Practice_Linklist
 
         public int DeleteFirstNode()
         {
-            if (this.head == null)
+            if (this.head == null) //Checking if my head is null or not 
             {
-                return 0;
+                return 0;          //For null return 0
             }
-            int deleteNode = this.head.data;
-            this.head = this.head.next;
+            int deleteNode = this.head.data; //if its not null then delet the first node
+            this.head = this.head.next;  //Assigning Head to next Node
             return deleteNode;
         }
         public void Display() //Display the LinkList
