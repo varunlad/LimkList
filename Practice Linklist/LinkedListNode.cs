@@ -19,11 +19,11 @@ namespace Practice_Linklist
             Node new_node = new Node(new_data);
             if (this.head == null)
             {
-                this.head = new_node;
+                this.head = new_node; //pointing Head position to new Node
             }
             else
             {
-                Node lastNode = GetLastNode();
+                Node lastNode = GetLastNode(); //calling GetLastNode Method to get Last Node  
                 lastNode.next = new_node;
             }
             Console.WriteLine("inserted Last into list " + new_node.data);
