@@ -66,9 +66,9 @@ namespace Practice_Linklist
             Node temp = this.head;
             while (temp != null)
             {
-                if (temp.data == value)
+                if (temp.data == value)  //Checking if my node data is equal to my Searching data or not
                 {
-                    Console.WriteLine("\nNode is present ");
+                    Console.WriteLine("\nNode is present "); //if it is equal Print the result
                     return value;
                 }
                 temp = temp.next;
