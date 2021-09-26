@@ -16,9 +16,9 @@ namespace Practice_Linklist
             customLinkedList.InsertLast(30);
             customLinkedList.InsertLast(40);
             customLinkedList.InsertLast(70);
+            Console.WriteLine(customLinkedList.Search(70));
             customLinkedList.Display();
-            Console.WriteLine("\nCount of nodes is " + customLinkedList.getCount());
-            customLinkedList.Display();
+          
 
             Console.ReadLine();
         }

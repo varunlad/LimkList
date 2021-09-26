@@ -61,24 +61,20 @@ namespace Practice_Linklist
 
         }
       
-        public int getCount()
+       
+        public int Search(int value)
         {
-            Node temp = head;
-            int count = 0;
+            Node temp = this.head;
             while (temp != null)
             {
-<<<<<<< HEAD
-                count++;
-=======
                 if (temp.data == value)  //Checking if my node data is equal to my Searching data or not
                 {
                     Console.WriteLine("\nNode is present "); //if it is equal Print the result
                     return value;
                 }
->>>>>>> UC7SearchNode
                 temp = temp.next;
             }
-            return count;
+            return value;
         }
     }
 }
